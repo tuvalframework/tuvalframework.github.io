@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>
+   Örüntü Fırçalar | Tuvalframework - JavaScript 2d canvas library
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="canonical" href="https://tuvalframework.github.io/docs/graphics/04.04.hatchBrushes.html">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/android-chrome-manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff"> <link rel="stylesheet" href="/css/style.css">
+<link href="//fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+<link rel="alternate" href="/atom.xml" title="Tuvalframework.js - Graphics Framework for Javascript"> <meta name="description" content="Örüntü fırçaları(Hatch Brushes), tarama stiline, ön plan rengine ve arka plan rengine sahip fırçalardır. Örüntüler, dikdörtgen çizgilerle çizgiler arasındaki alanın birleşimidir. Ön plan rengi, çizgil">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Örüntü Fırçalar">
+<meta property="og:url" content="https://tuvalframework.github.io/docs/graphics/04.04.hatchBrushes.html">
+<meta property="og:site_name" content="Tuvalframework.js - Graphics Framework for Javascript">
+<meta property="og:description" content="Örüntü fırçaları(Hatch Brushes), tarama stiline, ön plan rengine ve arka plan rengine sahip fırçalardır. Örüntüler, dikdörtgen çizgilerle çizgiler arasındaki alanın birleşimidir. Ön plan rengi, çizgil">
+<meta property="og:locale" content="tr">
+<meta property="og:image" content="https://tuvalframework.github.io/logo.png">
+<meta property="og:updated_time" content="2019-02-17T08:02:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Örüntü Fırçalar">
+<meta name="twitter:description" content="Örüntü fırçaları(Hatch Brushes), tarama stiline, ön plan rengine ve arka plan rengine sahip fırçalardır. Örüntüler, dikdörtgen çizgilerle çizgiler arasındaki alanın birleşimidir. Ön plan rengi, çizgil">
+<meta name="twitter:image" content="https://tuvalframework.github.io/logo.png">
+<meta name="twitter:site" content="@tuvalframework"> 
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-133715520-1', 'tuvalframework.github.io');
+  ga('send', 'pageview');
+</script> -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133715520-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133715520-1');
+</script>
+
+
+  </head>
+  <body>
+    <header id="header">
+  <div class="outer">
+    <div class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tuval</a>
+        <a id="main-nav-toggle"></a>
+      </h1>
+      <nav id="main-nav">
+        <ul id="main-nav-list">
+          
+          <li class="main-nav-item">
+            <a href="/docs/graphics/en" class="main-nav-link">
+              TUTORIALS
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/" class="main-nav-link">
+              TUTORIALS(TR)
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <input id="search" placeholder="Search the docs">
+          </li>
+
+        </ul>
+
+       <!--  <a
+          href="https://github.com/tuvalframework"
+          id="github-btn"
+          title="GitHub"
+          target="_blank"
+        ></a> -->
+        <!--
+          <a id="search-btn" class="st-search-launcher" title="Search"></a>
+        -->
+      </nav>
+    </div>
+  </div>
+</header>
+ <article class="page" itemscope="" itemtype="http://schema.org/Article">
+  <header id="page-banner">
+    <div class="outer">
+      <div id="page-banner-inner" class="inner">
+        <h1 id="page-title" itemprop="name">Örüntü Fırçalar</h1>
+        <a href="https://github.com/tuvalframework/site/blob/master/source/docs/graphics/04.04.hatchBrushes.md" title="Improve this doc" id="page-edit-link"></a>
+      </div>
+    </div>
+  </header>
+  <div class="outer">
+    <div id="mobile-menu-wrap"></div>
+
+    <div class="page-content">
+      <!--<div class="toc-wrap">-->
+        <!--<strong class="toc-title">Contents</strong>-->
+        <!---->
+      <!--</div>-->
+
+      <div class="page-entry" itemprop="articleBody">
+        <p>Örüntü fırçaları(Hatch Brushes), tarama stiline, ön plan rengine ve arka plan rengine sahip fırçalardır. Örüntüler, dikdörtgen çizgilerle çizgiler arasındaki alanın birleşimidir. Ön plan rengi, çizgilerin rengini tanımlar; arka plan rengi, çizgiler arasındaki rengi tanımlar.</p>
+<p>HatchBrush sınıfı yapılandırıcısı, ilk parametre olarak HatchStyle’ı ve ikinci ve üçüncü parametre olarak ta Color nesnesini alır. İkinci ve üçüncü Renk parametreleri ön ve arka plan renklerini temsil eder. Aşağıdaki kod parçacığı,  yapılandırıcıların iki versiyonunu gösterir:</p>
+<p><em>Typescript</em><br><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">constructor</span>(<span class="params">style: HatchStyle, color: Color</span>);</span><br><span class="line">public <span class="keyword">constructor</span>(<span class="params">style: HatchStyle, backgroundColor:Color, foregroundColor:Color</span>);</span><br></pre></td></tr></table></figure></p>
+<p>Aşağıdaki kod, ashed-vertical bir örüntü stili, mavi arka plan rengine ve kırmızı ön plan rengine sahip bir örüntü fırçası oluşturur:<br><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> hBrush: HatchBrush = <span class="keyword">new</span> HatchBrush(HatchStyle.DashedVertical, Color.Blue, Color.Red);</span><br></pre></td></tr></table></figure></p>
+<p>Bu örüntü fırçasını dikdörtgen veya elips gibi grafik şekillerini doldurmak için kullanabiliriz. Örneğin, aşağıdaki kod satırı hBrush kullanarak bir elips doldurur:<br><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line">tg.fillEllipse(hBrush, <span class="number">20</span>, <span class="number">40</span>, <span class="number">100</span>, <span class="number">120</span>);</span><br></pre></td></tr></table></figure></p>
+<p>HatchBrush üç sınıf üyesine sahiptir: BackgroundColor, ForegroundColor ve HatchStyle. BackgroundColor, örüntü çizgileri arasındaki boşlukların rengini döndürür ve ForegroundColor, örüntü çizgilerinin rengini gösterir. HatchStyle ise aşağıdaki tabloda listelenen HatchStyle numaralandırma tipinin üyelerinden biri olabilir.<br><iframe src="https://jsfiddle.net/tuvalframework/qt3d5o1z/show" width="100%" height="300" frameborder="0" allowfullscreen></iframe></p>
+<table>
+<thead>
+<tr>
+<th>Üye</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BackwardDiagonal</td>
+<td></td>
+</tr>
+<tr>
+<td>Cross</td>
+<td></td>
+</tr>
+<tr>
+<td>DarkDownwardDiagonal</td>
+<td></td>
+</tr>
+<tr>
+<td>DarkVertical</td>
+<td></td>
+</tr>
+<tr>
+<td>DashedDownwardDiagonal</td>
+<td></td>
+</tr>
+<tr>
+<td>DashedHorizontal</td>
+<td></td>
+</tr>
+<tr>
+<td>DashedUpwardDiagonal</td>
+<td></td>
+</tr>
+<tr>
+<td>DashedVertical</td>
+<td></td>
+</tr>
+<tr>
+<td>DiagonalBrick</td>
+<td></td>
+</tr>
+<tr>
+<td>DiagonalCross</td>
+<td></td>
+</tr>
+<tr>
+<td>Divot</td>
+<td></td>
+</tr>
+<tr>
+<td>DottedDiamond</td>
+<td></td>
+</tr>
+<tr>
+<td>DottedGrid</td>
+<td></td>
+</tr>
+<tr>
+<td>ForwardDiagonal</td>
+<td></td>
+</tr>
+<tr>
+<td>Horizontal</td>
+<td></td>
+</tr>
+<tr>
+<td>HorizontalBrick</td>
+<td></td>
+</tr>
+<tr>
+<td>LargeCheckerBoard</td>
+<td></td>
+</tr>
+<tr>
+<td>LargeConfetti</td>
+<td></td>
+</tr>
+<tr>
+<td>LargeGrid</td>
+<td></td>
+</tr>
+<tr>
+<td>LightDownwardDiagonal</td>
+<td></td>
+</tr>
+<tr>
+<td>LightHorizontal</td>
+<td></td>
+</tr>
+<tr>
+<td>LightUpwardDiagonal</td>
+<td></td>
+</tr>
+<tr>
+<td>LightVertical</td>
+<td></td>
+</tr>
+<tr>
+<td>Max</td>
+<td></td>
+</tr>
+<tr>
+<td>Min</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+
+      <footer id="page-footer">
+        <time id="page-footer-updated" datetime="2019-02-17T08:02:42.000Z" itemprop="dateModified">Last updated: Şub 17 2019</time>
+        <a href="/docs/graphics/04.03.solidBrushes.html" id="page-footer-prev" title="Düz Fırçalar">Prev</a><a href="/docs/graphics/04.05.textureBrushes.html" id="page-footer-next" title="Doku Fırçaları">Next</a>
+      </footer>
+      
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <aside id="sidebar">
+  
+    
+      <strong class="sidebar-title">Tuval Graphic Interface</strong>
+      
+        <a href="/docs/graphics/01.01.UnderstandingTuval.html" class="sidebar-link">TGI&#39;yı Anlamak</a>
+      
+        <a href="/docs/graphics/01.02.ExploringTuvalFunctionality.html" class="sidebar-link">TGI&#39;yı Keşfetmek</a>
+      
+        <a href="/docs/graphics/01.03.TGFromCanvasPerspective.html" class="sidebar-link">Canvas vs TGI</a>
+      
+        <a href="/docs/graphics/01.04.ClassesInTuvalGraphics.html" class="sidebar-link">Tuval Graphics Nesneleri</a>
+      
+    
+      <strong class="sidebar-title">İlk TGI Uygulaması</strong>
+      
+        <a href="/docs/graphics/02.00.YourFirstTGApplication.html" class="sidebar-link">TGI ile başlarken</a>
+      
+        <a href="/docs/graphics/02.01.DrawingSurfaces.html" class="sidebar-link">Çizim Yüzeyleri</a>
+      
+        <a href="/docs/graphics/02.02.CoordinateSystem.html" class="sidebar-link">Koordinat Sistemi</a>
+      
+        <a href="/docs/graphics/02.03.YourFirstTGApplication.html" class="sidebar-link">Öğretici - İlk TGI Uygulamanız</a>
+      
+        <a href="/docs/graphics/02.04.BasicTGObjects.html" class="sidebar-link">Bazı Temel Tuval Nesneleri</a>
+      
+    
+      <strong class="sidebar-title">Graphics Nesnesi</strong>
+      
+        <a href="/docs/graphics/03.00.TheGraphicsClass.html" class="sidebar-link">Giriş</a>
+      
+        <a href="/docs/graphics/03.01.GraphicsClassProperties.html" class="sidebar-link">Graphics Nesne Özellikleri</a>
+      
+        <a href="/docs/graphics/03.02.GraphicsClassMethods.html" class="sidebar-link">Graphics Nesne Yordamları</a>
+      
+    
+      <strong class="sidebar-title">Çizim Yordamları</strong>
+      
+        <a href="/docs/graphics/03.03.DrawingLines.html" class="sidebar-link">-drawLine</a>
+      
+        <a href="/docs/graphics/03.04.DrawingRectangles.html" class="sidebar-link">-drawRectangle</a>
+      
+        <a href="/docs/graphics/03.05.DrawingEllipses.html" class="sidebar-link">-drawEllipse</a>
+      
+        <a href="/docs/graphics/03.06.drawString.html" class="sidebar-link">-drawString</a>
+      
+        <a href="/docs/graphics/03.07.drawArc.html" class="sidebar-link">-drawArc</a>
+      
+        <a href="/docs/graphics/03.08.drawCurve.html" class="sidebar-link">-drawCurve</a>
+      
+        <a href="/docs/graphics/03.09.drawClosedCurve.html" class="sidebar-link">-drawClosedCurve</a>
+      
+        <a href="/docs/graphics/03.10.drawBezier.html" class="sidebar-link">-drawBezier</a>
+      
+        <a href="/docs/graphics/03.11.drawPolygon.html" class="sidebar-link">-drawPolygon</a>
+      
+        <a href="/docs/graphics/03.12.drawPath.html" class="sidebar-link">-drawPath</a>
+      
+        <a href="/docs/graphics/03.13.drawPie.html" class="sidebar-link">-drawPie</a>
+      
+        <a href="/docs/graphics/03.14.drawImage.html" class="sidebar-link">-drawImage</a>
+      
+        <a href="/docs/graphics/03.23.drawPoint.html" class="sidebar-link">-drawPoint</a>
+      
+    
+      <strong class="sidebar-title">Doldurma Yordamları</strong>
+      
+        <a href="/docs/graphics/03.15.fillClosedCurve.html" class="sidebar-link">-fillClosedCurve</a>
+      
+        <a href="/docs/graphics/03.16.fillEllipse.html" class="sidebar-link">-fillEllipse</a>
+      
+        <a href="/docs/graphics/03.17.fillPath.html" class="sidebar-link">-fillPath</a>
+      
+        <a href="/docs/graphics/03.18.fillPie.html" class="sidebar-link">-fillPie</a>
+      
+        <a href="/docs/graphics/03.19.fillPolygon.html" class="sidebar-link">-fillPolygon</a>
+      
+        <a href="/docs/graphics/03.20.fillRectangle.html" class="sidebar-link">-fillRectangle</a>
+      
+    
+      <strong class="sidebar-title">Diğer Yordamlar</strong>
+      
+        <a href="/docs/graphics/03.21.clear.html" class="sidebar-link">-clear</a>
+      
+        <a href="/docs/graphics/03.22.measureString.html" class="sidebar-link">-measureString</a>
+      
+        <a href="/docs/graphics/03.24.FromImage.html" class="sidebar-link">-FromImage</a>
+      
+        <a href="/docs/graphics/03.09.lineGraph.html" class="sidebar-link">Çizgi Grafik Uygulaması</a>
+      
+    
+      <strong class="sidebar-title">Brush Objects</strong>
+      
+        <a href="/docs/graphics/04.01.whatIsBrushInJGI.html" class="sidebar-link">Fırça Nedir</a>
+      
+        <a href="/docs/graphics/04.02.brushClass.html" class="sidebar-link">Brush Sınıfı</a>
+      
+        <a href="/docs/graphics/04.03.solidBrushes.html" class="sidebar-link">Düz Fırçalar</a>
+      
+        <a href="/docs/graphics/04.04.hatchBrushes.html" class="sidebar-link current">Örüntü Fırçalar</a>
+      
+        <a href="/docs/graphics/04.05.textureBrushes.html" class="sidebar-link">Doku Fırçaları</a>
+      
+        <a href="/docs/graphics/04.06.gradientBrushes.html" class="sidebar-link">Renk Geçiş Fırçaları</a>
+      
+        <a href="/docs/graphics/04.07.linearGradientBrush.html" class="sidebar-link">Doğrusal Renk Geçiş Fırçası</a>
+      
+        <a href="/docs/graphics/04.08.radialGradientBrush.html" class="sidebar-link">Radyal Renk Geçiş Fırçası</a>
+      
+        <a href="/docs/graphics/versionHistory.html" class="sidebar-link">Versiyon Geçmişi</a>
+      
+    
+    
+</aside>
+
+
+
+  </div>
+</article> <footer id="footer">
+  <div class="outer">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2019 tuvalframework<br>
+      </div>
+      <div id="footer-links">
+        <a href="https://twitter.com/tuvalframework" id="footer-link-twitter" class="footer-link" target="_blank"><span>Twitter</span></a>
+        <a href="https://github.com/tuvalframework" id="footer-link-github" class="footer-link" target="_blank"><span>GitHub</span></a>
+        <a href="https://www.youtube.com/channel/UCMlv-4xEIFzCnha_om6cJpQ" id="footer-link-youtube" class="footer-link" target="_blank"><span>Youtube</span></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'tuvalframework/Tuval.Graphics'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+</footer> 
+<!-- Disqus -->
+<script>
+  var disqus_shortname = 'tuvalframework';
+  
+  var disqus_url = 'https://tuvalframework.github.io/docs/graphics/04.04.hatchBrushes.html';
+  
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = 'https://tuvalframework.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<!-- Swiftype -->
+<!--
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function () {
+      Swiftype.key = 'rRaQRFqx1DcWDDysdpg_';
+
+      /** DO NOT EDIT BELOW THIS LINE **/
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = "//s.swiftypecdn.com/embed.js";
+      var entry = document.getElementsByTagName('script')[0];
+      document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
+    }());
+  </script>
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">
+  docsearch({
+    apiKey: 'a4929f1a68d08327923fa95bc4c669da',
+    indexName: 'tuvalframework',
+    inputSelector: '#search',
+    algoliaOptions: {
+      hitsPerPage: 10
+      // See https://www.algolia.com/doc/api-reference/api-parameters/
+    },
+    // transformData: function (suggestions) {
+    //   // Transform the list of suggestions, and the return the updated list
+    //   suggestions.sort(function (a, b) {
+    //     if (a.url.indexOf('/api/') >= 0) {
+    //       return 1;
+    //     } else {
+    //       return -1;
+    //     }
+    //   });
+    //   return suggestions.slice(0, 10);
+    // },
+    debug: true // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/retina.min.js"></script> <script src="/js/script.js"></script>
+<!-- Google+ -->
+<script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
+<!-- Twitter -->
+<script>
+  !(function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0],
+      p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + '://platform.twitter.com/widgets.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  })(document, 'script', 'twitter-wjs');
+</script>
+
+  </body>
+</html>

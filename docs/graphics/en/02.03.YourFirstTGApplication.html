@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>
+   Your first TGI App | Tuvalframework - JavaScript 2d canvas library
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="canonical" href="https://tuvalframework.github.io/docs/graphics/en/02.03.YourFirstTGApplication.html">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/android-chrome-manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff"> <link rel="stylesheet" href="/css/style.css">
+<link href="//fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+<link rel="alternate" href="/atom.xml" title="Tuvalframework.js - Graphics Framework for Javascript"> <meta name="description" content="In this section, you will learn how to write your first TGI application step by step. We will create a Web application and draw a few simple objects, such as lines, rectangles, and ellipses, using the">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your first TGI App">
+<meta property="og:url" content="https://tuvalframework.github.io/docs/graphics/en/02.03.YourFirstTGApplication.html">
+<meta property="og:site_name" content="Tuvalframework.js - Graphics Framework for Javascript">
+<meta property="og:description" content="In this section, you will learn how to write your first TGI application step by step. We will create a Web application and draw a few simple objects, such as lines, rectangles, and ellipses, using the">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://tuvalframework.github.io/logo.png">
+<meta property="og:updated_time" content="2019-02-28T12:31:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Your first TGI App">
+<meta name="twitter:description" content="In this section, you will learn how to write your first TGI application step by step. We will create a Web application and draw a few simple objects, such as lines, rectangles, and ellipses, using the">
+<meta name="twitter:image" content="https://tuvalframework.github.io/logo.png">
+<meta name="twitter:site" content="@tuvalframework"> 
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-133715520-1', 'tuvalframework.github.io');
+  ga('send', 'pageview');
+</script> -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133715520-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133715520-1');
+</script>
+
+
+  </head>
+  <body>
+    <header id="header">
+  <div class="outer">
+    <div class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tuval</a>
+        <a id="main-nav-toggle"></a>
+      </h1>
+      <nav id="main-nav">
+        <ul id="main-nav-list">
+          
+          <li class="main-nav-item">
+            <a href="/docs/graphics/en" class="main-nav-link">
+              TUTORIALS
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/" class="main-nav-link">
+              TUTORIALS(TR)
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <input id="search" placeholder="Search the docs">
+          </li>
+
+        </ul>
+
+       <!--  <a
+          href="https://github.com/tuvalframework"
+          id="github-btn"
+          title="GitHub"
+          target="_blank"
+        ></a> -->
+        <!--
+          <a id="search-btn" class="st-search-launcher" title="Search"></a>
+        -->
+      </nav>
+    </div>
+  </div>
+</header>
+ <article class="page" itemscope="" itemtype="http://schema.org/Article">
+  <header id="page-banner">
+    <div class="outer">
+      <div id="page-banner-inner" class="inner">
+        <h1 id="page-title" itemprop="name">Your first TGI App</h1>
+        <a href="https://github.com/tuvalframework/site/blob/master/source/docs/graphics/en/02.03.YourFirstTGApplication.md" title="Improve this doc" id="page-edit-link"></a>
+      </div>
+    </div>
+  </header>
+  <div class="outer">
+    <div id="mobile-menu-wrap"></div>
+
+    <div class="page-content">
+      <!--<div class="toc-wrap">-->
+        <!--<strong class="toc-title">Contents</strong>-->
+        <!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Creating-a-Web-Page"><span class="toc-number">1.</span> <span class="toc-text">Creating a Web Page</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Adding-Tuval-Javascript-Reference-to-Your-Web-Page"><span class="toc-number">2.</span> <span class="toc-text">Adding Tuval Javascript Reference to Your Web Page</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Creating-a-Drawing-Surface"><span class="toc-number">3.</span> <span class="toc-text">Creating a Drawing Surface</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Creation-of-Brush-and-Pen"><span class="toc-number">4.</span> <span class="toc-text">Creation of Brush and Pen</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Drawing-Shapes"><span class="toc-number">5.</span> <span class="toc-text">Drawing Shapes</span></a></li></ol>-->
+      <!--</div>-->
+
+      <div class="page-entry" itemprop="articleBody">
+        <p>In this section, you will learn how to write your first TGI application step by step. We will create a Web application and draw a few simple objects, such as lines, rectangles, and ellipses, using the graphics object.</p>
+<p>Here are the steps:</p>
+<ol>
+<li>Creating a web page</li>
+<li>Adding the canvas javascript file to your web page</li>
+<li>Creation of drawing surface</li>
+<li>Drawing and filling shapes</li>
+</ol>
+<h2 id="Creating-a-Web-Page"><a href="#Creating-a-Web-Page" class="headerlink" title="Creating a Web Page"></a>Creating a Web Page</h2><p>Because TGI is a javascript library, we need to use it in an environment that provides javascript runtime. The most simple and common environment is web pages to provide this.  The following code is a simple example of a web page.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>First TGI Application<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Adding-Tuval-Javascript-Reference-to-Your-Web-Page"><a href="#Adding-Tuval-Javascript-Reference-to-Your-Web-Page" class="headerlink" title="Adding Tuval Javascript Reference to Your Web Page"></a>Adding Tuval Javascript Reference to Your Web Page</h2><p>There are several ways to add TGI to your webpage. Here we will add the most simple way using the classic <em>script</em> tag over the CDN.<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/tuval@latest/tuval.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>As you can see above, you can start using the TGI code by just adding this script reference to your page. The final version of our application is as follows.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>First TGI Application<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/tuval@latest/tuval.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Creating-a-Drawing-Surface"><a href="#Creating-a-Drawing-Surface" class="headerlink" title="Creating a Drawing Surface"></a>Creating a Drawing Surface</h2><p>We need a drawing surface to make drawings using TGI’s objects. A drawing surface can point to different environments within HTML5. So it can be an HTML5 2d context or 3d contex or an svg structure. We’ll make drawings with 2d context in this example. First, we create a graphics object. When creating this object, we also specify the width and height of the drawing surface.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tg = <span class="keyword">new</span> Tuval.Graphics(<span class="number">200</span>, <span class="number">200</span>);</span><br></pre></td></tr></table></figure>
+<p>So we had a drawing surface with 2d context. Now it’s time to draw something into it. Below is the entire code.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>First TGI Application<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/tuval@latest/tuval.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> tg = <span class="keyword">new</span> Tuval.Graphics(<span class="number">200</span>, <span class="number">200</span>);</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Creation-of-Brush-and-Pen"><a href="#Creation-of-Brush-and-Pen" class="headerlink" title="Creation of Brush and Pen"></a>Creation of Brush and Pen</h2><p>When you have a Graphics object, the next step is to decide what to draw on the surface. You may need one or more of three objects: pen, brush, or picture. In this section we will concentrate only on pens and brushes. The pictures will be discussed in the following sections.<br>In TGI, the Pen and Brush classes represent a pen and brush, respectively. Brush class is an abstract class. This means that you cannot use this class directly, you can access this class through its derived classes. For example, SolidBrush can be used for a flat fill, while HatchBrush can be used for pattern fill. Pens are used when you need to draw lines, rectangles and curves. The brushes are used when you need to fill these shapes.<br>The constructor of the Pen class takes the color and width of the pen as an argument. The following code creates a red pen with a width of three pixels and a black pen with one pixel width. The Pens class also provides static members, each of which represents a pen with a specific color.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> redPen = <span class="keyword">new</span> Tuval.Pen(Tuval.Color.Red, <span class="number">3</span>);</span><br><span class="line"><span class="keyword">var</span> blackPen = Tuval.Pens.Black;</span><br></pre></td></tr></table></figure>
+<p>The SolidBrush class represents a flat brush in TGI. The constructor of this class receives a color object as an argument. The following code creates a flat green brush.<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> greenBrush = <span class="keyword">new</span> Tuval.SolidBrush(Tuval.Color.Green);</span><br></pre></td></tr></table></figure></p>
+<h2 id="Drawing-Shapes"><a href="#Drawing-Shapes" class="headerlink" title="Drawing Shapes"></a>Drawing Shapes</h2><p>When you have surface, pens, and / or brushes, you can draw lines, shapes, curves, or images. The Graphics class provides drawing and filling methods to draw and fill graph shapes, curves, or images. For example, the fillRectangle methods creates a filled color rectangle and drawRectangle draws the boundary of the specified rectangle with the specified pen. The drawing methods take a pen as the argument and the fill methods take a brush.</p>
+<p>In the above section we have obtained our drawing surface with <em>new Tuval.Graphics (200, 200)</em>. Now we will create a rectangle, two pencils and a solid brush. In the following code snippet, we call drawRectangle, fillEllipse, and drawLine. The drawRectangle method draws the boundaries of a rectangle, the fillEllipse method fills an ellipse with the specified brush object, and the drawLine method draws a line using the specified pen object.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> rect = <span class="keyword">new</span> Tuval.RectangleF(<span class="number">20</span>, <span class="number">20</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"><span class="keyword">var</span> redPen = <span class="keyword">new</span> Tuval.Pen(Tuval.Color.Red, <span class="number">3</span>);</span><br><span class="line"><span class="keyword">var</span> blackPen = Tuval.Pens.Black;</span><br><span class="line"><span class="keyword">var</span> greenBrush = <span class="keyword">new</span> Tuval.SolidBrush(Tuval.Color.Green);</span><br><span class="line">view.drawRectangle(redPen, rect);</span><br><span class="line">view.fillEllipse(greenBrush, rect);</span><br><span class="line">view.drawLine(blackPen, <span class="number">0</span>, <span class="number">250</span>, <span class="keyword">this</span>.Width, <span class="number">250</span>);</span><br><span class="line">view.fillEllipse(Tuval.Brushes.Blue, <span class="number">70</span>, <span class="number">220</span>, <span class="number">30</span>, <span class="number">30</span>);</span><br><span class="line">view.fillEllipse(Tuval.Brushes.SkyBlue, <span class="number">100</span>, <span class="number">210</span>, <span class="number">40</span>, <span class="number">40</span>);</span><br><span class="line">view.fillEllipse(Tuval.Brushes.Green, <span class="number">140</span>, <span class="number">200</span>, <span class="number">50</span>, <span class="number">50</span>);</span><br><span class="line">view.fillEllipse(Tuval.Brushes.Yellow, <span class="number">190</span>, <span class="number">190</span>, <span class="number">60</span>, <span class="number">60</span>);</span><br><span class="line">view.fillEllipse(Tuval.Brushes.Violet, <span class="number">250</span>, <span class="number">180</span>, <span class="number">70</span>, <span class="number">70</span>);</span><br><span class="line">view.fillEllipse(Tuval.Brushes.Red, <span class="number">320</span>, <span class="number">170</span>, <span class="number">80</span>, <span class="number">80</span>);</span><br></pre></td></tr></table></figure>
+<p>Finally, by including the above code, we finalize our web page.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>First TGI Application<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/tuval@latest/tuval.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> tg = <span class="keyword">new</span> Tuval.Graphics(<span class="number">250</span>, <span class="number">250</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> rect = <span class="keyword">new</span> Tuval.RectangleF(<span class="number">20</span>, <span class="number">20</span>, <span class="number">100</span>, <span class="number">100</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> redPen = <span class="keyword">new</span> Tuval.Pen(Tuval.Color.Red, <span class="number">3</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> blackPen = Tuval.Pens.Black;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> greenBrush = <span class="keyword">new</span> Tuval.SolidBrush(Tuval.Color.Green);</span></span><br><span class="line"><span class="undefined">    tg.drawRectangle(redPen, rect);</span></span><br><span class="line"><span class="undefined">    tg.fillEllipse(greenBrush, rect);</span></span><br><span class="line"><span class="javascript">    tg.drawLine(blackPen, <span class="number">0</span>, <span class="number">250</span>, <span class="keyword">this</span>.Width, <span class="number">250</span>);</span></span><br><span class="line"><span class="undefined">    tg.fillEllipse(Tuval.Brushes.Blue, 70, 220, 30, 30);</span></span><br><span class="line"><span class="undefined">    tg.fillEllipse(Tuval.Brushes.SkyBlue, 100, 210, 40, 40);</span></span><br><span class="line"><span class="undefined">    tg.fillEllipse(Tuval.Brushes.Green, 140, 200, 50, 50);</span></span><br><span class="line"><span class="undefined">    tg.fillEllipse(Tuval.Brushes.Yellow, 190, 190, 60, 60);</span></span><br><span class="line"><span class="undefined">    tg.fillEllipse(Tuval.Brushes.Violet, 250, 180, 70, 70);</span></span><br><span class="line"><span class="undefined">    tg.fillEllipse(Tuval.Brushes.Red, 320, 170, 80, 80);</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<iframe src="https://jsfiddle.net/tuvalframework/h4860y2o/show" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <footer id="page-footer">
+        <time id="page-footer-updated" datetime="2019-02-28T12:31:18.000Z" itemprop="dateModified">Last updated: Feb 28 2019</time>
+        <a href="/docs/graphics/en/02.02.CoordinateSystem.html" id="page-footer-prev" title="Koordinat Sistemi">Prev</a><a href="/docs/graphics/en/02.04.BasicTGObjects.html" id="page-footer-next" title="Basic TGI Objects">Next</a>
+      </footer>
+      
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <aside id="sidebar">
+  
+  
+    <strong class="sidebar-title">Tuval Graphic Interface</strong>
+    
+      <a href="/docs/graphics/en/01.01.UnderstandingTuval.html" class="sidebar-link">What is TGI</a>
+    
+      <a href="/docs/graphics/en/01.02.ExploringTuvalFunctionality.html" class="sidebar-link">Explore TGI</a>
+    
+      <a href="/docs/graphics/en/01.03.TGFromCanvasPerspective.html" class="sidebar-link">Canvas vs TGI</a>
+    
+      <a href="/docs/graphics/en/01.04.ClassesInTuvalGraphics.html" class="sidebar-link">TGI Objects</a>
+    
+  
+    <strong class="sidebar-title">First TGI Application</strong>
+    
+      <a href="/docs/graphics/en/02.00.YourFirstTGApplication.html" class="sidebar-link">When starting with TGI</a>
+    
+      <a href="/docs/graphics/en/02.01.DrawingSurfaces.html" class="sidebar-link">Drawing Surfaces</a>
+    
+      <a href="/docs/graphics/en/02.02.CoordinateSystem.html" class="sidebar-link">Koordinat Sistemi</a>
+    
+      <a href="/docs/graphics/en/02.03.YourFirstTGApplication.html" class="sidebar-link current">First TGI Application</a>
+    
+      <a href="/docs/graphics/en/02.04.BasicTGObjects.html" class="sidebar-link">Basic TGI Objects</a>
+    
+  
+    <strong class="sidebar-title">Graphics Object</strong>
+    
+      <a href="/docs/graphics/en/03.00.TheGraphicsClass.html" class="sidebar-link">Introduction</a>
+    
+      <a href="/docs/graphics/en/03.01.GraphicsClassProperties.html" class="sidebar-link">Graphics Properties</a>
+    
+      <a href="/docs/graphics/en/03.02.GraphicsClassMethods.html" class="sidebar-link">Graphics Methods</a>
+    
+  
+    <strong class="sidebar-title">Drawing Methods</strong>
+    
+      <a href="/docs/graphics/en/03.03.DrawingLines.html" class="sidebar-link">-drawLine</a>
+    
+      <a href="/docs/graphics/en/03.04.DrawingRectangles.html" class="sidebar-link">-drawRectangle</a>
+    
+      <a href="/docs/graphics/en/03.05.DrawingEllipses.html" class="sidebar-link">-drawEllipse</a>
+    
+      <a href="/docs/graphics/en/03.06.drawString.html" class="sidebar-link">-drawString</a>
+    
+      <a href="/docs/graphics/en/03.07.drawArc.html" class="sidebar-link">-drawArc</a>
+    
+      <a href="/docs/graphics/en/03.08.drawCurve.html" class="sidebar-link">-drawCurve</a>
+    
+      <a href="/docs/graphics/en/03.09.drawClosedCurve.html" class="sidebar-link">-drawClosedCurve</a>
+    
+      <a href="/docs/graphics/en/03.10.drawBezier.html" class="sidebar-link">-drawBezier</a>
+    
+      <a href="/docs/graphics/en/03.11.drawPolygon.html" class="sidebar-link">-drawPolygon</a>
+    
+      <a href="/docs/graphics/en/03.12.drawPath.html" class="sidebar-link">-drawPath</a>
+    
+      <a href="/docs/graphics/en/03.13.drawPie.html" class="sidebar-link">-drawPie</a>
+    
+      <a href="/docs/graphics/en/03.14.drawImage.html" class="sidebar-link">-drawImage</a>
+    
+      <a href="/docs/graphics/en/03.23.drawPoint.html" class="sidebar-link">-drawPoint</a>
+    
+  
+    <strong class="sidebar-title">Fiiling Methods</strong>
+    
+      <a href="/docs/graphics/en/03.15.fillClosedCurve.html" class="sidebar-link">-fillClosedCurve</a>
+    
+      <a href="/docs/graphics/en/03.16.fillEllipse.html" class="sidebar-link">-fillEllipse</a>
+    
+      <a href="/docs/graphics/en/03.17.fillPath.html" class="sidebar-link">-fillPath</a>
+    
+      <a href="/docs/graphics/en/03.18.fillPie.html" class="sidebar-link">-fillPie</a>
+    
+      <a href="/docs/graphics/en/03.19.fillPolygon.html" class="sidebar-link">-fillPolygon</a>
+    
+      <a href="/docs/graphics/en/03.20.fillRectangle.html" class="sidebar-link">-fillRectangle</a>
+    
+  
+    <strong class="sidebar-title">Other Methods</strong>
+    
+      <a href="/docs/graphics/en/03.21.clear.html" class="sidebar-link">-clear</a>
+    
+      <a href="/docs/graphics/en/03.22.measureString.html" class="sidebar-link">-measureString</a>
+    
+      <a href="/docs/graphics/en/03.24.FromImage.html" class="sidebar-link">-FromImage</a>
+    
+  
+    <strong class="sidebar-title">Brush Objects</strong>
+    
+      <a href="/docs/graphics/en/04.01.whatIsBrushInJGI.html" class="sidebar-link">What is Brush in TGI</a>
+    
+      <a href="/docs/graphics/en/04.02.brushClass.html" class="sidebar-link">Brush Class</a>
+    
+      <a href="/docs/graphics/en/04.03.solidBrushes.html" class="sidebar-link">Solid Brushes</a>
+    
+      <a href="/docs/graphics/en/04.04.hatchBrushes.html" class="sidebar-link">Hatch Brushes</a>
+    
+      <a href="/docs/graphics/en/04.05.textureBrushes.html" class="sidebar-link">Texture Brushes</a>
+    
+      <a href="/docs/graphics/en/04.06.gradientBrushes.html" class="sidebar-link">Gradient Brushes</a>
+    
+      <a href="/docs/graphics/en/04.07.linearGradientBrush.html" class="sidebar-link">Linear Gradient Brush</a>
+    
+      <a href="/docs/graphics/en/04.08.radialGradientBrush.html" class="sidebar-link">Radial Gradient Brush</a>
+    
+      <a href="/docs/graphics/en/versionHistory.html" class="sidebar-link">Version History</a>
+    
+  
+  
+</aside>
+
+
+
+  </div>
+</article> <footer id="footer">
+  <div class="outer">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2019 tuvalframework<br>
+      </div>
+      <div id="footer-links">
+        <a href="https://twitter.com/tuvalframework" id="footer-link-twitter" class="footer-link" target="_blank"><span>Twitter</span></a>
+        <a href="https://github.com/tuvalframework" id="footer-link-github" class="footer-link" target="_blank"><span>GitHub</span></a>
+        <a href="https://www.youtube.com/channel/UCMlv-4xEIFzCnha_om6cJpQ" id="footer-link-youtube" class="footer-link" target="_blank"><span>Youtube</span></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'tuvalframework/Tuval.Graphics'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+</footer> 
+<!-- Disqus -->
+<script>
+  var disqus_shortname = 'tuvalframework';
+  
+  var disqus_url = 'https://tuvalframework.github.io/docs/graphics/en/02.03.YourFirstTGApplication.html';
+  
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = 'https://tuvalframework.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<!-- Swiftype -->
+<!--
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function () {
+      Swiftype.key = 'rRaQRFqx1DcWDDysdpg_';
+
+      /** DO NOT EDIT BELOW THIS LINE **/
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = "//s.swiftypecdn.com/embed.js";
+      var entry = document.getElementsByTagName('script')[0];
+      document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
+    }());
+  </script>
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">
+  docsearch({
+    apiKey: 'a4929f1a68d08327923fa95bc4c669da',
+    indexName: 'tuvalframework',
+    inputSelector: '#search',
+    algoliaOptions: {
+      hitsPerPage: 10
+      // See https://www.algolia.com/doc/api-reference/api-parameters/
+    },
+    // transformData: function (suggestions) {
+    //   // Transform the list of suggestions, and the return the updated list
+    //   suggestions.sort(function (a, b) {
+    //     if (a.url.indexOf('/api/') >= 0) {
+    //       return 1;
+    //     } else {
+    //       return -1;
+    //     }
+    //   });
+    //   return suggestions.slice(0, 10);
+    // },
+    debug: true // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/retina.min.js"></script> <script src="/js/script.js"></script>
+<!-- Google+ -->
+<script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
+<!-- Twitter -->
+<script>
+  !(function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0],
+      p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + '://platform.twitter.com/widgets.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  })(document, 'script', 'twitter-wjs');
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>
+   Some Basic TGI Objects | Tuvalframework - JavaScript 2d canvas library
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="canonical" href="https://tuvalframework.github.io/docs/graphics/en/02.04.BasicTGObjects.html">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/android-chrome-manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff"> <link rel="stylesheet" href="/css/style.css">
+<link href="//fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+<link rel="alternate" href="/atom.xml" title="Tuvalframework.js - Graphics Framework for Javascript"> <meta name="description" content="We’ve met some of the objects needed to write a simple graphical application in the code examples in the previous sections. Before proceeding to the next section, it is worth to talk to some basic can">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Some Basic TGI Objects">
+<meta property="og:url" content="https://tuvalframework.github.io/docs/graphics/en/02.04.BasicTGObjects.html">
+<meta property="og:site_name" content="Tuvalframework.js - Graphics Framework for Javascript">
+<meta property="og:description" content="We’ve met some of the objects needed to write a simple graphical application in the code examples in the previous sections. Before proceeding to the next section, it is worth to talk to some basic can">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://tuvalframework.github.io/logo.png">
+<meta property="og:updated_time" content="2019-02-28T14:12:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Some Basic TGI Objects">
+<meta name="twitter:description" content="We’ve met some of the objects needed to write a simple graphical application in the code examples in the previous sections. Before proceeding to the next section, it is worth to talk to some basic can">
+<meta name="twitter:image" content="https://tuvalframework.github.io/logo.png">
+<meta name="twitter:site" content="@tuvalframework"> 
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-133715520-1', 'tuvalframework.github.io');
+  ga('send', 'pageview');
+</script> -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133715520-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133715520-1');
+</script>
+
+
+  </head>
+  <body>
+    <header id="header">
+  <div class="outer">
+    <div class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tuval</a>
+        <a id="main-nav-toggle"></a>
+      </h1>
+      <nav id="main-nav">
+        <ul id="main-nav-list">
+          
+          <li class="main-nav-item">
+            <a href="/docs/graphics/en" class="main-nav-link">
+              TUTORIALS
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/" class="main-nav-link">
+              TUTORIALS(TR)
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <input id="search" placeholder="Search the docs">
+          </li>
+
+        </ul>
+
+       <!--  <a
+          href="https://github.com/tuvalframework"
+          id="github-btn"
+          title="GitHub"
+          target="_blank"
+        ></a> -->
+        <!--
+          <a id="search-btn" class="st-search-launcher" title="Search"></a>
+        -->
+      </nav>
+    </div>
+  </div>
+</header>
+ <article class="page" itemscope="" itemtype="http://schema.org/Article">
+  <header id="page-banner">
+    <div class="outer">
+      <div id="page-banner-inner" class="inner">
+        <h1 id="page-title" itemprop="name">Some Basic TGI Objects</h1>
+        <a href="https://github.com/tuvalframework/site/blob/master/source/docs/graphics/en/02.04.BasicTGObjects.md" title="Improve this doc" id="page-edit-link"></a>
+      </div>
+    </div>
+  </header>
+  <div class="outer">
+    <div id="mobile-menu-wrap"></div>
+
+    <div class="page-content">
+      <!--<div class="toc-wrap">-->
+        <!--<strong class="toc-title">Contents</strong>-->
+        <!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Color-Class"><span class="toc-number">1.</span> <span class="toc-text">Color Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PointF-Class"><span class="toc-number">2.</span> <span class="toc-text">PointF Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RectangleF-Class"><span class="toc-number">3.</span> <span class="toc-text">RectangleF Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SizeF-Nesnesi"><span class="toc-number">4.</span> <span class="toc-text">SizeF Nesnesi</span></a></li></ol>-->
+      <!--</div>-->
+
+      <div class="page-entry" itemprop="articleBody">
+        <p>We’ve met some of the objects needed to write a simple graphical application in the code examples in the previous sections. Before proceeding to the next section, it is worth to talk to some basic canvas objects such as Color, PointF, and RectangleF objects provided by Tuval Framework. It is very important to understand these objects are very basic objects that will appear in all our applications.</p>
+<h2 id="Color-Class"><a href="#Color-Class" class="headerlink" title="Color Class"></a>Color Class</h2><p>You may have noticed that we used the Color class in our previous examples. The Color class represents an RGBA (Red, Green, Blue, Alpha) sequence (red-green-blue, alpha). This object contains a static property for almost any color. For example, Color.Black and Color.Red represent black and red, respectively. In addition to these static properties, this structure has additional features defined in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red, Blue, Green, Aqua, Azure vb.</td>
+<td>–</td>
+</tr>
+<tr>
+<td>R</td>
+<td>–</td>
+</tr>
+<tr>
+<td>G</td>
+<td>–</td>
+</tr>
+<tr>
+<td>B</td>
+<td>–</td>
+</tr>
+<tr>
+<td>A</td>
+<td>–</td>
+</tr>
+<tr>
+<td>IsEmpty</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FromRgba</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FromName</td>
+<td>–</td>
+</tr>
+<tr>
+<td>getBrightness</td>
+<td>–</td>
+</tr>
+<tr>
+<td>getHue</td>
+<td>–</td>
+</tr>
+<tr>
+<td>getSaturation</td>
+<td>–</td>
+</tr>
+<tr>
+<td>toRgba</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<h2 id="PointF-Class"><a href="#PointF-Class" class="headerlink" title="PointF Class"></a>PointF Class</h2><p>In TGI, a PointF class represents the x and y coordinate pairs that define a point in a two-dimensional plane. The PointF class contructor takes the x and y coordinates as parameters.</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> point = <span class="keyword">new</span> Tuval.PointF(<span class="number">10</span>,<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<p> The PointF class defines three properties: IsEmpty, X, and Y. If a point is empty, the IsEmpty property returns true; this means that both X and Y are zero; Otherwise returns false. The X and Y properties return the x and y coordinates of a point, respectively. The Empty static property of the point structure creates a new point where the X and Y values are set to zero.</p>
+<p>Using PointF.Empty creates a point with zero X and Y values and assigns new coordinate values using the X and Y properties. This example creates a Graphics object and the drawLine method draws a line starting from the first point to the second point using the defined pen.</p>
+<p><em>Typescript</em><br><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> pt:Tuval.PointF = <span class="keyword">new</span> Tuval.PointF(<span class="number">50</span>, <span class="number">50</span>);</span><br><span class="line"><span class="keyword">const</span> newPoint: Tuval.PointF = Tuval.PointF.Empty;</span><br><span class="line"></span><br><span class="line">newPoint.X = <span class="number">100</span>;</span><br><span class="line">newPoint.Y = <span class="number">200</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> view: Tuval.Graphics =<span class="keyword">new</span> Tuval.Graphics();</span><br><span class="line"><span class="keyword">const</span> pn: Tuval.Pen = <span class="keyword">new</span> Tuval.Pen(Tuval.Color.Blue, <span class="number">4</span>);</span><br><span class="line">view.drawLine(pn, pt, newPoint);</span><br></pre></td></tr></table></figure></p>
+<iframe src="https://jsfiddle.net/tuvalframework/zsva7f8b/show" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+<h2 id="RectangleF-Class"><a href="#RectangleF-Class" class="headerlink" title="RectangleF Class"></a>RectangleF Class</h2><p>RectangleF nesnesi <strong>Tuval.Graphics</strong> ‘te bir dikdörtgeni temsil eder. Bir RectangleF nesnesi, sol üst köşeyi ve dikdörtgen bir bölgenin yüksekliğini ve genişliğini saklar. PointF ve SizeF nesnelerinden veya dikdörtgenin başlangıç ve bitiş koordinatları olarak dört tam sayı değerini kullanarak bir RectangleF nesnesi oluşturabilirsiniz.</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> pt: Tuval.PointF = <span class="keyword">new</span> Tuval.PointF(<span class="number">10</span>, <span class="number">10</span>);</span><br><span class="line"><span class="keyword">const</span> sz: Tuval.SizeF = <span class="keyword">new</span> Tuval.SizeF(<span class="number">60</span>, <span class="number">40</span>);</span><br><span class="line"><span class="keyword">const</span> rect1:Tuval.RectangleF = Tuval.RectangleF.Empty;</span><br><span class="line"><span class="keyword">const</span> rect2: Tuval.RectangleF = <span class="keyword">new</span> Tuval.RectangleF(<span class="number">20</span>, <span class="number">30</span>, <span class="number">30</span>, <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (rect1.IsEmpty)&#123;</span><br><span class="line">    rect1.Location = pt;</span><br><span class="line">    rect1.Width = sz.Width;</span><br><span class="line">    rect1.Height = sz.Height;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> str = <span class="string">"Location:"</span>+ rect1.Location.toString();</span><br><span class="line">str += <span class="string">", X:"</span> +rect1.X.toString();</span><br><span class="line">str += <span class="string">", Y:"</span>+ rect1.Y.toString();</span><br><span class="line">str += <span class="string">", Left:"</span>+ rect1.Left.toString();</span><br><span class="line">str += <span class="string">", Right:"</span>+ rect1.Right.toString();</span><br><span class="line">str += <span class="string">", Top:"</span>+ rect1.Top.toString();</span><br><span class="line">str += <span class="string">", Bottom:"</span>+ rect1.Bottom.toString();</span><br></pre></td></tr></table></figure>
+<p>RectangleF nesnesi, dikdörtgenin yüksekliğini, genişliğini ve konumunu elde etmek için kullanılabilecek özellikler sağlar. Aşağıdaki tablo RectangleF nesnesinin özelliklerini açıklar.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bottom</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>–</td>
+</tr>
+<tr>
+<td>IsEmpty</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Left</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Top</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Width</td>
+<td>–</td>
+</tr>
+<tr>
+<td>X</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<p>Aşağıdaki örnekte, üç RectangleF nesnesi oluşturmak için üç farklı yöntem kullanır. İlk yöntem, bir Nokta(PointF) ve Boyut(SizeF) kullanarak bir Rectangle nesnesi oluşturur. İkinci ve üçüncü yöntemler, başlangıç x ve y koordinatları olarak dört tam sayı değeri ve dikdörtgenin genişliğini ve yüksekliğini kullanarak bir RectangleF örneği oluşturur. RectangleF oluşturduktan sonra, program Pen ve SolidBrush sınıflarını kullanarak kalem ve fırça nesneleri oluşturur ve dikdörtgenleri çizip doldurmak için <strong>Tuval.Graphics</strong> doldurma ve çizme yordamlarını çağırır.</p>
+<p><em>Typescript</em><br><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Create a Graphics object</span></span><br><span class="line"><span class="keyword">const</span> view: Tuval.Graphics = <span class="keyword">new</span> Tuval.Graphics();</span><br><span class="line"><span class="keyword">const</span> x: <span class="built_in">number</span> = <span class="number">40</span>;</span><br><span class="line"><span class="keyword">const</span> y: <span class="built_in">number</span> = <span class="number">40</span>;</span><br><span class="line"><span class="keyword">const</span> height: <span class="built_in">number</span> = <span class="number">120</span>;</span><br><span class="line"><span class="keyword">const</span> width: <span class="built_in">number</span> = <span class="number">120</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pt: Tuval.PointF = <span class="keyword">new</span> Tuval.PointF(<span class="number">80</span>, <span class="number">80</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> sz: Tuval.SizeF = <span class="keyword">new</span> Tuval.SizeF(<span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"><span class="keyword">const</span> rect1: Tuval.RectangleF = <span class="keyword">new</span> Tuval.RectangleF(pt, sz);</span><br><span class="line"><span class="keyword">const</span> rect2: Tuval.RectangleF = <span class="keyword">new</span> Tuval.RectangleF(x, y, width, height);</span><br><span class="line"><span class="keyword">const</span> rect3:Tuval.RectangleF = <span class="keyword">new</span> Tuval.RectangleF(<span class="number">10</span>, <span class="number">10</span>, <span class="number">180</span>, <span class="number">180</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> redPen:Tuval.Pen = <span class="keyword">new</span> Tuval.Pen(Tuval.Color.Red, <span class="number">2</span>);</span><br><span class="line"><span class="keyword">const</span> greenBrush:Tuval.SolidBrush =<span class="keyword">new</span> Tuval.SolidBrush(Tuval.Color.Blue);</span><br><span class="line"><span class="keyword">const</span> blueBrush:Tuval.SolidBrush = <span class="keyword">new</span> Tuval.SolidBrush(Tuval.Color.Green);</span><br><span class="line">view.drawRectangle(redPen, rect3);</span><br><span class="line">view.fillRectangle(blueBrush, rect2);</span><br><span class="line">view.fillRectangle(greenBrush, rect1);</span><br></pre></td></tr></table></figure></p>
+<iframe src="https://jsfiddle.net/tuvalframework/ujprwL6s/show" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contains</td>
+<td>Belirtilen noktanın bir dikdörtgenin  içinde olup olmadığını belirler.</td>
+</tr>
+<tr>
+<td>FromLTRB</td>
+<td>Belirtilen kenar konumlarıyla bir dikdörtgen oluşturur.</td>
+</tr>
+<tr>
+<td>Inflate</td>
+<td>Bir dikdörtgenin verilen parametrelere göre dort noktasından genişletilmiş bir kopyasını oluşturur ve döndürür.</td>
+</tr>
+<tr>
+<td>Intersect</td>
+<td>–</td>
+</tr>
+<tr>
+<td>IntersectsWith</td>
+<td>Belirtilen bir dikdörtgenin parametre olarak verilen diğer dikdörtgen ile kesişip kesişmeyeceğini belirler.</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Belirtilen bir dikdörtgenin konumunu belirtilen miktarda ayarlar.</td>
+</tr>
+<tr>
+<td>Union</td>
+<td>İki Dikdörtgen yapısının birleşimini içeren bir dikdörtgen döndürür.</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>PointF<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/tuval@latest/tuval.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> tg = <span class="keyword">new</span> Tuval.Graphics(<span class="number">200</span>, <span class="number">200</span>);</span></span><br><span class="line"><span class="javascript">    <span class="comment">//  PointF, SizeF, ve RectangleF nesnelerini oluşturuyoruz.</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> pt = <span class="keyword">new</span> Tuval.PointF(<span class="number">30.8</span>, <span class="number">20.7</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> sz = <span class="keyword">new</span> Tuval.SizeF(<span class="number">60.0</span>, <span class="number">40.0</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> rect2 = <span class="keyword">new</span> Tuval.RectangleF(<span class="number">40.2</span>, <span class="number">40.6</span>, <span class="number">100.5</span>, <span class="number">100.0</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> rect1 = <span class="keyword">new</span> Tuval.RectangleF(pt, sz);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> rect3 = rect1.clone();</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> rect4 = rect1.clone();</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span>  rect5 = rect2.clone();</span></span><br><span class="line"><span class="javascript">    <span class="comment">// Dikdörtgenleri çiziyoruz.</span></span></span><br><span class="line"><span class="undefined">    tg.drawRectangle(Tuval.Pens.Black, rect3);</span></span><br><span class="line"><span class="undefined">    tg.drawRectangle(Tuval.Pens.Red, rect5);</span></span><br><span class="line"><span class="javascript">    <span class="comment">// Kesişimleri buluyoruz.</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> isectRect = Tuval.RectangleF.Intersect(rect3, rect5);</span></span><br><span class="line"><span class="javascript">    <span class="comment">// Yeni dikdörtgeni boyuyoruz.</span></span></span><br><span class="line"><span class="javascript">    tg.fillRectangle(<span class="keyword">new</span> Tuval.SolidBrush(Tuval.Color.Blue), isectRect);</span></span><br><span class="line"><span class="javascript">    <span class="comment">// Yen, boyut (Size) nesnesi oluşturuyoruz.)</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> inflateSize = <span class="keyword">new</span> Tuval.SizeF(<span class="number">0</span>, <span class="number">40</span>);</span></span><br><span class="line"><span class="undefined">    isectRect = isectRect.inflate(inflateSize);</span></span><br><span class="line"><span class="undefined">    tg.drawRectangle(Tuval.Pens.Blue, isectRect);</span></span><br><span class="line"><span class="undefined">    rect4 = Tuval.RectangleF.Empty;</span></span><br><span class="line"><span class="javascript">    rect4.Location = <span class="keyword">new</span> Tuval.PointF(<span class="number">50</span>, <span class="number">50</span>);</span></span><br><span class="line"><span class="undefined">    rect4.X = 30;</span></span><br><span class="line"><span class="undefined">    rect4.Y = 40;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> unionRect = Tuval.RectangleF.Union(rect4, rect5);</span></span><br><span class="line"><span class="undefined">    tg.drawRectangle(Tuval.Pens.Green, unionRect);</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<iframe src="https://jsfiddle.net/tuvalframework/L7gv841t/show" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+<h2 id="SizeF-Nesnesi"><a href="#SizeF-Nesnesi" class="headerlink" title="SizeF Nesnesi"></a>SizeF Nesnesi</h2><p>SizeF nesnesi bir dikdörtgen alanın genişliğini ve yüksekliğini temsil eder. PointF ve RectangleF’ te de olduğu gibi bu sınıfında sıfır yüksekliğe ve sıfır genişliğe sahip  <em>Empty</em> adında static bir özelliği bulunmaktadır.</p>
+<p>PointF nesnesinin genişliğini ve yüksekliğini sırasıyla yapıcı argümanları olarak geçirerek SizeF nesneleri oluşturabilirsiniz. Aşağıdaki kod parçası SizeF oluşturmanın farklı yollarını gösterir.</p>
+<p><em>Typescript</em><br><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> pt1:Tuval.PointF = <span class="keyword">new</span> Tuval.PointF(<span class="number">50.0</span>, <span class="number">80.0</span>);</span><br><span class="line"><span class="keyword">const</span> sz1:Tuval.SizeF = <span class="keyword">new</span> Tuval.SizeF(pt1);</span><br><span class="line"><span class="keyword">const</span> sz2:Tuval.SizeF = <span class="keyword">new</span> Tuval.SizeF(<span class="number">100</span>, <span class="number">150</span>);</span><br></pre></td></tr></table></figure></p>
+<p>Height ve Width özellikleri, SizeF nesnesi tarafından temsil edilen alanın sırasıyla yükseklik ve genişliğini temsil eder. Eğer SizeF nesnesi sıfır yükseklik ve sıfır genişliğe sahipse, IsEmpty özelliği true değerini döndürür; Aksi takdirde false döndürür.</p>
+
+      </div>
+
+      <footer id="page-footer">
+        <time id="page-footer-updated" datetime="2019-02-28T14:12:34.000Z" itemprop="dateModified">Last updated: Feb 28 2019</time>
+        <a href="/docs/graphics/en/02.03.YourFirstTGApplication.html" id="page-footer-prev" title="First TGI Application">Prev</a><a href="/docs/graphics/en/03.00.TheGraphicsClass.html" id="page-footer-next" title="Introduction">Next</a>
+      </footer>
+      
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <aside id="sidebar">
+  
+  
+    <strong class="sidebar-title">Tuval Graphic Interface</strong>
+    
+      <a href="/docs/graphics/en/01.01.UnderstandingTuval.html" class="sidebar-link">What is TGI</a>
+    
+      <a href="/docs/graphics/en/01.02.ExploringTuvalFunctionality.html" class="sidebar-link">Explore TGI</a>
+    
+      <a href="/docs/graphics/en/01.03.TGFromCanvasPerspective.html" class="sidebar-link">Canvas vs TGI</a>
+    
+      <a href="/docs/graphics/en/01.04.ClassesInTuvalGraphics.html" class="sidebar-link">TGI Objects</a>
+    
+  
+    <strong class="sidebar-title">First TGI Application</strong>
+    
+      <a href="/docs/graphics/en/02.00.YourFirstTGApplication.html" class="sidebar-link">When starting with TGI</a>
+    
+      <a href="/docs/graphics/en/02.01.DrawingSurfaces.html" class="sidebar-link">Drawing Surfaces</a>
+    
+      <a href="/docs/graphics/en/02.02.CoordinateSystem.html" class="sidebar-link">Koordinat Sistemi</a>
+    
+      <a href="/docs/graphics/en/02.03.YourFirstTGApplication.html" class="sidebar-link">First TGI Application</a>
+    
+      <a href="/docs/graphics/en/02.04.BasicTGObjects.html" class="sidebar-link current">Basic TGI Objects</a>
+    
+  
+    <strong class="sidebar-title">Graphics Object</strong>
+    
+      <a href="/docs/graphics/en/03.00.TheGraphicsClass.html" class="sidebar-link">Introduction</a>
+    
+      <a href="/docs/graphics/en/03.01.GraphicsClassProperties.html" class="sidebar-link">Graphics Properties</a>
+    
+      <a href="/docs/graphics/en/03.02.GraphicsClassMethods.html" class="sidebar-link">Graphics Methods</a>
+    
+  
+    <strong class="sidebar-title">Drawing Methods</strong>
+    
+      <a href="/docs/graphics/en/03.03.DrawingLines.html" class="sidebar-link">-drawLine</a>
+    
+      <a href="/docs/graphics/en/03.04.DrawingRectangles.html" class="sidebar-link">-drawRectangle</a>
+    
+      <a href="/docs/graphics/en/03.05.DrawingEllipses.html" class="sidebar-link">-drawEllipse</a>
+    
+      <a href="/docs/graphics/en/03.06.drawString.html" class="sidebar-link">-drawString</a>
+    
+      <a href="/docs/graphics/en/03.07.drawArc.html" class="sidebar-link">-drawArc</a>
+    
+      <a href="/docs/graphics/en/03.08.drawCurve.html" class="sidebar-link">-drawCurve</a>
+    
+      <a href="/docs/graphics/en/03.09.drawClosedCurve.html" class="sidebar-link">-drawClosedCurve</a>
+    
+      <a href="/docs/graphics/en/03.10.drawBezier.html" class="sidebar-link">-drawBezier</a>
+    
+      <a href="/docs/graphics/en/03.11.drawPolygon.html" class="sidebar-link">-drawPolygon</a>
+    
+      <a href="/docs/graphics/en/03.12.drawPath.html" class="sidebar-link">-drawPath</a>
+    
+      <a href="/docs/graphics/en/03.13.drawPie.html" class="sidebar-link">-drawPie</a>
+    
+      <a href="/docs/graphics/en/03.14.drawImage.html" class="sidebar-link">-drawImage</a>
+    
+      <a href="/docs/graphics/en/03.23.drawPoint.html" class="sidebar-link">-drawPoint</a>
+    
+  
+    <strong class="sidebar-title">Fiiling Methods</strong>
+    
+      <a href="/docs/graphics/en/03.15.fillClosedCurve.html" class="sidebar-link">-fillClosedCurve</a>
+    
+      <a href="/docs/graphics/en/03.16.fillEllipse.html" class="sidebar-link">-fillEllipse</a>
+    
+      <a href="/docs/graphics/en/03.17.fillPath.html" class="sidebar-link">-fillPath</a>
+    
+      <a href="/docs/graphics/en/03.18.fillPie.html" class="sidebar-link">-fillPie</a>
+    
+      <a href="/docs/graphics/en/03.19.fillPolygon.html" class="sidebar-link">-fillPolygon</a>
+    
+      <a href="/docs/graphics/en/03.20.fillRectangle.html" class="sidebar-link">-fillRectangle</a>
+    
+  
+    <strong class="sidebar-title">Other Methods</strong>
+    
+      <a href="/docs/graphics/en/03.21.clear.html" class="sidebar-link">-clear</a>
+    
+      <a href="/docs/graphics/en/03.22.measureString.html" class="sidebar-link">-measureString</a>
+    
+      <a href="/docs/graphics/en/03.24.FromImage.html" class="sidebar-link">-FromImage</a>
+    
+  
+    <strong class="sidebar-title">Brush Objects</strong>
+    
+      <a href="/docs/graphics/en/04.01.whatIsBrushInJGI.html" class="sidebar-link">What is Brush in TGI</a>
+    
+      <a href="/docs/graphics/en/04.02.brushClass.html" class="sidebar-link">Brush Class</a>
+    
+      <a href="/docs/graphics/en/04.03.solidBrushes.html" class="sidebar-link">Solid Brushes</a>
+    
+      <a href="/docs/graphics/en/04.04.hatchBrushes.html" class="sidebar-link">Hatch Brushes</a>
+    
+      <a href="/docs/graphics/en/04.05.textureBrushes.html" class="sidebar-link">Texture Brushes</a>
+    
+      <a href="/docs/graphics/en/04.06.gradientBrushes.html" class="sidebar-link">Gradient Brushes</a>
+    
+      <a href="/docs/graphics/en/04.07.linearGradientBrush.html" class="sidebar-link">Linear Gradient Brush</a>
+    
+      <a href="/docs/graphics/en/04.08.radialGradientBrush.html" class="sidebar-link">Radial Gradient Brush</a>
+    
+      <a href="/docs/graphics/en/versionHistory.html" class="sidebar-link">Version History</a>
+    
+  
+  
+</aside>
+
+
+
+  </div>
+</article> <footer id="footer">
+  <div class="outer">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2019 tuvalframework<br>
+      </div>
+      <div id="footer-links">
+        <a href="https://twitter.com/tuvalframework" id="footer-link-twitter" class="footer-link" target="_blank"><span>Twitter</span></a>
+        <a href="https://github.com/tuvalframework" id="footer-link-github" class="footer-link" target="_blank"><span>GitHub</span></a>
+        <a href="https://www.youtube.com/channel/UCMlv-4xEIFzCnha_om6cJpQ" id="footer-link-youtube" class="footer-link" target="_blank"><span>Youtube</span></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'tuvalframework/Tuval.Graphics'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+</footer> 
+<!-- Disqus -->
+<script>
+  var disqus_shortname = 'tuvalframework';
+  
+  var disqus_url = 'https://tuvalframework.github.io/docs/graphics/en/02.04.BasicTGObjects.html';
+  
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = 'https://tuvalframework.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<!-- Swiftype -->
+<!--
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function () {
+      Swiftype.key = 'rRaQRFqx1DcWDDysdpg_';
+
+      /** DO NOT EDIT BELOW THIS LINE **/
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = "//s.swiftypecdn.com/embed.js";
+      var entry = document.getElementsByTagName('script')[0];
+      document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
+    }());
+  </script>
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">
+  docsearch({
+    apiKey: 'a4929f1a68d08327923fa95bc4c669da',
+    indexName: 'tuvalframework',
+    inputSelector: '#search',
+    algoliaOptions: {
+      hitsPerPage: 10
+      // See https://www.algolia.com/doc/api-reference/api-parameters/
+    },
+    // transformData: function (suggestions) {
+    //   // Transform the list of suggestions, and the return the updated list
+    //   suggestions.sort(function (a, b) {
+    //     if (a.url.indexOf('/api/') >= 0) {
+    //       return 1;
+    //     } else {
+    //       return -1;
+    //     }
+    //   });
+    //   return suggestions.slice(0, 10);
+    // },
+    debug: true // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/retina.min.js"></script> <script src="/js/script.js"></script>
+<!-- Google+ -->
+<script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
+<!-- Twitter -->
+<script>
+  !(function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0],
+      p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + '://platform.twitter.com/widgets.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  })(document, 'script', 'twitter-wjs');
+</script>
+
+  </body>
+</html>

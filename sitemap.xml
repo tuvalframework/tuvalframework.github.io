@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/versionHistory.html</loc>
+    
+    <lastmod>2019-03-08T13:26:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/04.08.radialGradientBrush.html</loc>
+    
+    <lastmod>2019-03-08T13:24:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/04.08.radialGradientBrush.html</loc>
+    
+    <lastmod>2019-03-07T13:00:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/versionHistory.html</loc>
+    
+    <lastmod>2019-03-04T14:37:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/04.07.linearGradientBrush.html</loc>
+    
+    <lastmod>2019-03-04T12:23:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/04.07.linearGradientBrush.html</loc>
+    
+    <lastmod>2019-03-04T12:08:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.07.drawArc.html</loc>
+    
+    <lastmod>2019-03-02T18:11:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/02.04.BasicTGObjects.html</loc>
+    
+    <lastmod>2019-02-28T14:12:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/02.03.YourFirstTGApplication.html</loc>
+    
+    <lastmod>2019-02-28T12:31:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/02.02.CoordinateSystem.html</loc>
+    
+    <lastmod>2019-02-28T08:49:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/02.02.CoordinateSystem.html</loc>
+    
+    <lastmod>2019-02-28T08:48:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/02.01.DrawingSurfaces.html</loc>
+    
+    <lastmod>2019-02-28T08:32:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/02.00.YourFirstTGApplication.html</loc>
+    
+    <lastmod>2019-02-27T14:22:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/01.04.ClassesInTuvalGraphics.html</loc>
+    
+    <lastmod>2019-02-27T14:14:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/01.03.TGFromCanvasPerspective.html</loc>
+    
+    <lastmod>2019-02-27T12:25:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/01.02.ExploringTuvalFunctionality.html</loc>
+    
+    <lastmod>2019-02-27T11:28:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/01.01.UnderstandingTuval.html</loc>
+    
+    <lastmod>2019-02-27T08:50:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/04.06.gradientBrushes.html</loc>
+    
+    <lastmod>2019-02-22T12:04:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/04.06.gradientBrushes.html</loc>
+    
+    <lastmod>2019-02-22T08:49:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/04.05.textureBrushes.html</loc>
+    
+    <lastmod>2019-02-19T11:19:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/04.05.textureBrushes.html</loc>
+    
+    <lastmod>2019-02-19T11:11:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/04.04.hatchBrushes.html</loc>
+    
+    <lastmod>2019-02-18T07:24:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/04.04.hatchBrushes.html</loc>
+    
+    <lastmod>2019-02-17T08:02:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/04.03.solidBrushes.html</loc>
+    
+    <lastmod>2019-02-16T13:13:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/04.03.solidBrushes.html</loc>
+    
+    <lastmod>2019-02-16T13:06:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/04.02.brushClass.html</loc>
+    
+    <lastmod>2019-02-16T13:04:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/04.02.brushClass.html</loc>
+    
+    <lastmod>2019-02-15T21:24:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/04.01.whatIsBrushInJGI.html</loc>
+    
+    <lastmod>2019-02-15T20:03:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/04.01.whatIsBrushInJGI.html</loc>
+    
+    <lastmod>2019-02-15T19:57:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/index.html</loc>
+    
+    <lastmod>2019-02-15T19:51:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/index.html</loc>
+    
+    <lastmod>2019-02-15T17:37:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/01.02.ExploringTuvalFunctionality.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/01.03.TGFromCanvasPerspective.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/01.04.ClassesInTuvalGraphics.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.14.drawImage.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.12.drawPath.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/02.00.YourFirstTGApplication.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/02.01.DrawingSurfaces.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.00.TheGraphicsClass.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.06.drawString.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/01.01.UnderstandingTuval.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.09.drawClosedCurve.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.10.drawBezier.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.09.lineGraph.html</loc>
+    
+    <lastmod>2019-02-15T17:36:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.03.DrawingLines.html</loc>
+    
+    <lastmod>2019-02-15T11:35:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/03.24.FromImage.html</loc>
+    
+    <lastmod>2019-02-15T08:31:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.24.FromImage.html</loc>
+    
+    <lastmod>2019-02-15T08:27:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/03.23.drawPoint.html</loc>
+    
+    <lastmod>2019-02-15T07:44:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.23.drawPoint.html</loc>
+    
+    <lastmod>2019-02-15T07:41:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.04.DrawingRectangles.html</loc>
+    
+    <lastmod>2019-02-14T21:28:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.05.DrawingEllipses.html</loc>
+    
+    <lastmod>2019-02-13T21:44:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/03.07.drawArc.html</loc>
+    
+    <lastmod>2019-02-13T20:07:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/03.05.DrawingEllipses.html</loc>
+    
+    <lastmod>2019-02-13T20:06:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/03.03.DrawingLines.html</loc>
+    
+    <lastmod>2019-02-08T15:10:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/index.html</loc>
+    
+    <lastmod>2019-02-08T13:51:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.22.measureString.html</loc>
+    
+    <lastmod>2019-02-08T13:32:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.21.clear.html</loc>
+    
+    <lastmod>2019-02-08T11:39:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.20.fillRectangle.html</loc>
+    
+    <lastmod>2019-02-08T11:06:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.19.fillPolygon.html</loc>
+    
+    <lastmod>2019-02-08T09:11:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.18.fillPie.html</loc>
+    
+    <lastmod>2019-02-08T08:55:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.17.fillPath.html</loc>
+    
+    <lastmod>2019-02-08T08:36:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.16.fillEllipse.html</loc>
+    
+    <lastmod>2019-02-07T15:07:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.15.fillClosedCurve.html</loc>
+    
+    <lastmod>2019-02-07T14:56:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.13.drawPie.html</loc>
+    
+    <lastmod>2019-02-07T08:25:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/en/03.12.drawPath.html</loc>
+    
+    <lastmod>2019-02-07T07:58:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.11.drawPolygon.html</loc>
+    
+    <lastmod>2019-02-04T12:44:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.02.GraphicsClassMethods.html</loc>
+    
+    <lastmod>2019-02-01T12:16:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.08.drawCurve.html</loc>
+    
+    <lastmod>2019-02-01T12:11:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/02.04.BasicTGObjects.html</loc>
+    
+    <lastmod>2019-01-31T15:04:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/02.03.YourFirstTGApplication.html</loc>
+    
+    <lastmod>2019-01-31T14:59:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/03.01.GraphicsClassProperties.html</loc>
+    
+    <lastmod>2019-01-31T13:27:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/downloads/code/data_and_serialization/Simple_Load.html</loc>
+    
+    <lastmod>2019-01-28T15:14:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/index_.html</loc>
+    
+    <lastmod>2019-01-28T15:13:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/drawingShapes.html</loc>
+    
+    <lastmod>2019-01-28T15:13:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/android-chrome-manifest.json</loc>
+    
+    <lastmod>2019-01-28T15:11:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/basicTuvalObjects.html</loc>
+    
+    <lastmod>2019-01-21T07:49:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/coordinateSystem.html</loc>
+    
+    <lastmod>2019-01-21T07:46:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/api/RectangleF/rectangleF.html</loc>
+    
+    <lastmod>2019-01-20T16:45:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/api/graphics/methods/fillRectangle.html</loc>
+    
+    <lastmod>2019-01-20T16:33:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/api/graphics/methods/drawRectangle.html</loc>
+    
+    <lastmod>2019-01-20T16:33:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tuvalframework.github.io/docs/graphics/drawingSurface.html</loc>
+    
+    <lastmod>2019-01-20T13:27:32.000Z</lastmod>
+    
+  </url>
+  
+</urlset>
